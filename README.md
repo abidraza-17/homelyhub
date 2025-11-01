@@ -1,92 +1,138 @@
-# 🏠 Homely Hub
+# 🏡 HomelyHub – Smart Property Rental Platform
 
-**Homely Hub** is a property rental and management web application that allows users to browse, rent, and manage properties with ease. The project follows the **MERN stack architecture** (MongoDB, Express, React, Node.js).
-
----
-
-## 🚀 Project Overview
-
-Homely Hub provides a smooth experience for both **tenants** and **property owners**.  
-Users can:
-- View available properties with detailed descriptions and images  
-- Filter and search based on price, location, and amenities  
-- Manage property listings through an admin dashboard  
-- Securely register and log in with authentication  
+HomelyHub is a full-stack web application designed to simplify the process of renting and managing properties.  
+It provides users with seamless login, property listing, image uploads, and booking functionalities — all powered by **MERN Stack (MongoDB, Express, React, Node.js)** and **ImageKit** for media management.
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Features
 
-**Frontend:** React.js, HTML, CSS, JavaScript  
-**Backend:** Node.js, Express.js  
-**Database:** MongoDB Atlas  
-**Deployment:**  
-- Frontend → **Vercel**  
-- Backend → **Render**
+### 👤 User Module
+- Register and log in securely (JWT-based authentication)
+- Manage personal profile
+- View and manage bookings
+
+### 🏠 Property Module
+- Add and manage property listings with detailed information
+- Upload property images using **ImageKit.io**
+- Filter properties by location, price, and amenities
+
+### 💳 Booking & Payments
+- View property details and availability
+- Book accommodations with date-based options
+- Integrated booking management dashboard
+
+### 🖥️ Admin/Owner Side
+- Create and edit property listings
+- View bookings made by users
 
 ---
 
-## 🌐 Deployment Links
+## ⚙️ Tech Stack
 
-- **Frontend (Vercel):** [https://your-frontend-url.vercel.app](https://ynvnk-homelyhub.vercel.app/)  
-- **Backend (Render):** [https://your-backend-url.onrender.com](https://homelyhub-lhx9.onrender.com)
-- **Portfolio:** [https://yadam.vercel.app/](https://yadam.vercel.app/)
+| Layer | Technology |
+|-------|-------------|
+| Frontend | React.js + Vite + Tailwind CSS |
+| Backend | Node.js + Express.js |
+| Database | MongoDB Atlas |
+| Media Storage | ImageKit.io |
+| Authentication | JWT & Cookies |
+| Hosting | Vercel (Frontend), Render / Localhost (Backend) |
 
 ---
 
-## ⚙️ Installation & Setup (Local)
+## 🧩 Folder Structure
 
-Follow the steps below to run this project locally:
+homelyhub-main/
+├── frontend/ # React frontend (Vite)
+│ ├── src/
+│ └── package.json
+│
+├── backend/ # Node.js backend (Express)
+│ ├── src/
+│ │ ├── models/
+│ │ ├── routes/
+│ │ ├── controllers/
+│ │ └── utils/
+│ └── package.json
+│
+└── README.md
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/yourusername/homely-hub.git
-cd homely-hub
-```
+yaml
+Copy code
 
-### 2. Install dependencies for backend
-```bash
-cd backend
-npm install
-```
+---
 
-### 3. Install dependencies for frontend
-```bash
-cd ../frontend
-npm install
-```
+## 🔑 Environment Variables
 
-### 4. Configure environment variables
+Create a `.env` file in your `/backend` folder and include:
 
-Create a `.env` file in the backend folder and add:
-```bash
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+```env
+# Server
 PORT=5000
-```
+NODE_ENV=development
+CLIENT_URL=http://localhost:5173
 
-### 5. Run the backend server
-```bash
+# MongoDB
+MONGO_URI=your_mongodb_connection_string
+
+# JWT
+JWT_SECRET=your_secret_key
+
+# ImageKit
+IMAGEKIT_PUBLIC_KEY=your_public_key
+IMAGEKIT_PRIVATE_KEY=your_private_key
+IMAGEKIT_URL_ENDPOINT=https://ik.imagekit.io/your_imagekit_id/
+🛠️ Setup & Installation
+1️⃣ Clone the repository
+bash
+Copy code
+git clone https://github.com/abidraza-17/homelyhub.git
+cd homelyhub-main
+2️⃣ Backend Setup
+bash
+Copy code
 cd backend
+npm install
 npm start
-```
+Your backend should run at:
+👉 http://localhost:5000
 
-### 6. Run the frontend
-```bash
+3️⃣ Frontend Setup
+bash
+Copy code
 cd frontend
+npm install
 npm run dev
-```
+Frontend runs at:
+👉 http://localhost:5173
 
-### 📸 Features
+🧠 How It Works
+User signs up / logs in (JWT-based authentication)
 
-- User authentication (Register/Login)
-- Property listing & management
-- Image upload and property details view
-- Filter & search options
-- Responsive and modern UI
+User browses available rental properties
 
-### 👩‍💻 Author
+Property owners can add new listings with images via ImageKit
 
-Yadam Naga Venkata Naveen Kumar
-Frontend deployed on Vercel | Backend deployed on Render
+Users can book and view property details
+
+Bookings are stored and retrievable via MongoDB Atlas
+
+🌐 Deployment (Optional)
+Frontend: Deploy to Vercel
+
+Backend: Deploy to Render or Railway
+
+Database: MongoDB Atlas
+
+Media Storage: ImageKit.io
+
+🧑‍💻 Author
+Mohammad Abid Raza
+📧 [abidrazaf3@gmail..com]
+💼 linkedin.com/in/mohammadabidraza
+🌍 github.com/abidraza-17
+
+📝 License
+This project is licensed under the MIT License — free to use and modify.
 
